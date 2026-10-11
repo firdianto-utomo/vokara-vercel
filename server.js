@@ -15,6 +15,7 @@
 
 const express = require("express");
 const path = require("path");
+const fs = require("fs");
 const nodemailer = require("nodemailer");
 
 const app = express();
@@ -132,11 +133,18 @@ app.post("/api/inquiry", async (req, res) => {
   }
 });
 
-// ---------- Fallback: unknown pages go back to the landing page ----------
+// ---------- Landing page for every other GET request ----------
+// The page is read once into memory, so it works both on Hostinger
+// and on Vercel (where express.static is ignored). Never redirects.
+let indexHtml = null;
+try {
+  indexHtml = fs.readFileSync(path.join(__dirname, "public", "index.html"), "utf8");
+} catch (err) {
+  console.error("[vokara] Could not read public/index.html:", err.message);
+}
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"), (err) => {
-    if (err) res.redirect("/");
-  });
+  if (!indexHtml) return res.status(500).type("text").send("Website file not found (public/index.html).");
+  res.type("html").send(indexHtml);
 });
 
 // ---------- Start ----------
