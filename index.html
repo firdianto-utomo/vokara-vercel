@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- ================= SEO ================= -->
+<title>Vokara — AI-Powered Safety &amp; Training Video Production</title>
+<meta name="description" content="Vokara produces AI-powered safety induction, HSE, SOP and training videos for companies. Delivered in 3–5 working days with 3 free revisions, reviewed by a professional editor.">
+<meta name="keywords" content="AI video production, safety induction video, HSE video, training video, SOP video, onboarding video, corporate video Indonesia">
+<meta name="theme-color" content="#13294B">
+<!-- TODO: replace vokara.com with your real domain after deploying -->
+<link rel="canonical" href="https://www.vokara.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Vokara — AI-Powered Safety & Training Videos">
+<meta property="og:description" content="Clear, engaging HSE, SOP and training videos for companies. Delivered in 3–5 working days.">
+<meta property="og:url" content="https://www.vokara.com/">
+<!-- TODO (later): <meta property="og:image" content="https://www.vokara.com/og-image.jpg"> 1200x630 -->
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2313294B'/%3E%3Cpath d='M19 19l13 28 13-28' stroke='white' stroke-width='5.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+<!-- Fonts: Geist (text) + Geist Mono (numbers, labels) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Vokara",
+  "description": "AI-powered safety induction, HSE, SOP and training video production for companies.",
+  "email": "utomofirdianto@gmail.com",
+  "telephone": "+6289523655264",
+  "areaServed": "ID",
+  "url": "https://www.vokara.com/"
+}
+</script>
+
+<style>
+/* =============================================================
+   1. DESIGN TOKENS — brand colors & fonts live here
+   ============================================================= */
+:root{
+  --bg:#F5F6F8;          /* page background (cool neutral) */
+  --surface:#FFFFFF;     /* white surfaces */
+  --ink:#0F1724;         /* off-black text (never pure black) */
+  --ink-2:#344054;
+  --muted:#667085;
+  --line:#E2E5EA;
+  --navy:#13294B;        /* the ONE brand accent */
+  --navy-2:#1E3A66;
+  --navy-soft:#E9EEF5;
+  --deep:#0B1628;        /* dark sections */
+  --deep-line:rgba(255,255,255,.1);
+  --on-deep:#C9D3E3;
+  --wa:#1F9D58;          /* WhatsApp buttons only */
+  --danger:#B42318;
+  --r-lg:28px; --r:18px; --r-sm:12px;
+  --shadow:0 24px 48px -24px rgba(19,41,75,.18);
+  --ease:cubic-bezier(.16,1,.3,1);
+  --spring:cubic-bezier(.34,1.56,.64,1);
+  --font:'Geist',ui-sans-serif,system-ui,sans-serif;
+  --mono:'Geist Mono',ui-monospace,SFMono-Regular,Menlo,monospace;
+  --max:1240px;
+}
+
+/* =============================================================
+   2. BASE
+   ============================================================= */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--font);background:var(--bg);color:var(--ink);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+/* Film-grain overlay: fixed + pointer-events none, so it never repaints on scroll */
+body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:90;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.035em;line-height:1.05;color:var(--ink)}
+h2{font-size:clamp(1.9rem,3.6vw,3rem)}
+h3{font-size:1.2rem;letter-spacing:-.02em;line-height:1.25}
+p{margin:0}
+.mono{font-family:var(--mono);font-feature-settings:"tnum"}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 24px}
+section{padding:120px 0}
+@media (max-width:767px){section{padding:72px 0}.wrap{padding:0 16px}}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--mono);font-size:.75rem;letter-spacing:.08em;text-transform:uppercase;color:var(--navy-2);margin-bottom:20px}
+.eyebrow::before{content:"";width:18px;height:1px;background:currentColor}
+.lead{font-size:1.1rem;color:var(--muted);line-height:1.65;max-width:58ch}
+.dark{background:var(--deep);color:var(--on-deep)}
+.dark h2,.dark h3{color:#fff}
+.dark .eyebrow{color:#8EA3C4}
+.dark .lead{color:#9AA9C0}
+:focus-visible{outline:2px solid var(--navy-2);outline-offset:3px;border-radius:8px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip:focus{position:fixed;top:12px;left:12px;width:auto;height:auto;clip:auto;z-index:100;background:#fff;padding:10px 16px;border-radius:10px}
+.ic{width:20px;height:20px;flex:none;stroke:currentColor;stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+
+/* Buttons — magnetic offset (--mx/--my) + tactile press (--press) */
+.btn{--mx:0px;--my:0px;--press:1;display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 26px;border-radius:999px;border:1px solid transparent;font:500 .97rem var(--font);cursor:pointer;white-space:nowrap;position:relative;overflow:hidden;transform:translate3d(var(--mx),var(--my),0) scale(var(--press));transition:transform .45s var(--ease),background .25s,border-color .25s,color .25s}
+.btn:active{--press:.97}
+.btn-primary{background:var(--navy);color:#fff;box-shadow:inset 0 1px 0 rgba(255,255,255,.12)}
+.btn-primary:hover{background:var(--navy-2)}
+.btn-ghost{border-color:var(--line);color:var(--ink);background:var(--surface)}
+.btn-ghost:hover{border-color:var(--ink-2)}
+.btn-light{background:#fff;color:var(--navy)}
+.btn-wa{background:var(--wa);color:#fff}
+.btn-sm{height:42px;padding:0 18px;font-size:.9rem}
+.btn .ic{width:18px;height:18px}
+.btn .arrow{transition:transform .45s var(--ease)}
+.btn:hover .arrow{transform:translateX(3px)}
+
+/* Reveal on scroll, staggered with --i */
+.reveal{opacity:0;transform:translate3d(0,18px,0);transition:opacity .9s var(--ease),transform .9s var(--ease);transition-delay:calc(var(--i,0) * 90ms)}
+.reveal.in{opacity:1;transform:none}
+
+/* =============================================================
+   3. NAVBAR
+   ============================================================= */
+.nav{position:sticky;top:0;z-index:40;background:rgba(245,246,248,.78);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+.nav.scrolled{border-color:var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
+.wordmark{font-weight:700;font-size:1.12rem;letter-spacing:.24em;color:var(--navy)}
+.nav-links{display:flex;gap:4px;list-style:none;margin:0;padding:0}
+.nav-links a{display:block;padding:8px 14px;border-radius:999px;font-size:.93rem;color:var(--ink-2);transition:background .2s,color .2s}
+.nav-links a:hover{background:var(--navy-soft);color:var(--navy)}
+.menu-btn{display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--line);background:var(--surface);cursor:pointer;color:var(--ink);place-items:center}
+@media (max-width:900px){
+  .nav-links{position:absolute;top:72px;left:0;right:0;flex-direction:column;background:var(--surface);border-bottom:1px solid var(--line);padding:8px 16px 16px;opacity:0;transform:translateY(-8px);pointer-events:none;transition:opacity .3s var(--ease),transform .3s var(--ease)}
+  .nav-links.open{opacity:1;transform:none;pointer-events:auto}
+  .nav-links a{padding:14px 8px;border-radius:0;border-bottom:1px solid var(--line)}
+  .menu-btn{display:grid}
+  .nav-cta{display:none}
+}
+
+/* =============================================================
+   4. HERO — asymmetric split, live "production console"
+   ============================================================= */
+.hero{min-height:calc(100vh - 72px);min-height:calc(100dvh - 72px);display:grid;align-items:center;padding:56px 0 88px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,1fr);gap:72px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,4vw,3.5rem);letter-spacing:-.045em;line-height:1.02;margin-bottom:24px}
+.hero h1 .soft{color:var(--navy-2);display:block}
+.hero .lead{margin-bottom:36px}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:56px}
+.hero-stats{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;gap:0;margin:0;border-top:1px solid var(--line);padding-top:24px}
+.hero-stats div{padding-right:36px;margin-right:36px;border-right:1px solid var(--line)}
+.hero-stats div:last-child{border:0;margin:0;padding:0}
+.hero-stats dt{font-size:.8rem;color:var(--muted);margin-bottom:4px}
+.hero-stats dd{margin:0;font-family:var(--mono);font-size:1.3rem;color:var(--ink);letter-spacing:-.02em}
+@media (max-width:1000px){.hero-grid{grid-template-columns:1fr;gap:56px}.hero{min-height:0;padding-top:40px}}
+@media (max-width:480px){.hero-stats{grid-template-columns:1fr 1fr 1fr}.hero-stats div{padding-right:12px;margin-right:12px}.hero-stats dd{font-size:1.05rem}}
+
+.hero-visual{position:relative}
+.console{background:var(--deep);border-radius:var(--r-lg);padding:14px;box-shadow:0 40px 80px -32px rgba(11,22,40,.55),inset 0 1px 0 rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.06);color:var(--on-deep)}
+.console-head{display:flex;align-items:center;gap:12px;padding:6px 8px 14px;font-size:.8rem}
+.console-head .id{color:#7F93B4;font-size:.75rem}
+.console-head .title{color:#fff;font-weight:500;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.live{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.7rem;color:#B7C6DD;padding:5px 10px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08)}
+.live i{width:6px;height:6px;border-radius:50%;background:#7FD1A6;animation:breathe 2.4s ease-in-out infinite}
+@keyframes breathe{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.35;transform:scale(.7)}}
+
+.frame{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:radial-gradient(120% 90% at 80% 0%,#25446F 0%,#132948 45%,#0A1424 100%)}
+.frame svg.scene{position:absolute;inset:0;width:100%;height:100%}
+.figure{animation:float 6s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+.frame-tag{position:absolute;top:12px;left:12px;font-size:.68rem;color:#C9D3E3;background:rgba(10,20,36,.55);padding:5px 9px;border-radius:8px;border:1px solid rgba(255,255,255,.08)}
+.subtitle{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);width:calc(100% - 40px);display:flex;align-items:flex-start;gap:10px;background:rgba(6,12,22,.72);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(6px);border-radius:10px;padding:9px 12px;min-height:56px;color:#fff;font-size:.86rem;line-height:1.45}
+.subtitle .lang{flex:none;font-size:.66rem;color:#0B1628;background:#E9EEF5;border-radius:5px;padding:2px 6px;margin-top:2px}
+.caret{display:inline-block;width:2px;height:1em;background:#fff;vertical-align:-2px;margin-left:2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+.timeline{display:grid;grid-template-columns:28px 1fr;gap:8px 10px;padding:16px 8px 6px}
+.timeline .lbl{font-size:.65rem;color:#6F82A3;line-height:14px}
+.lanes{position:relative;display:grid;gap:8px;overflow:hidden}
+.lane{position:relative;height:14px;border-radius:4px;background:rgba(255,255,255,.04)}
+.lane i{position:absolute;top:0;bottom:0;border-radius:4px;background:#2C4D7C}
+.lane.a i{background:#3B5F92;opacity:.7}
+.lane.s i{background:#5A7AA8;opacity:.55}
+.rail{position:absolute;inset:0;animation:play 10s linear infinite;pointer-events:none}
+.rail::before{content:"";position:absolute;top:-4px;bottom:-4px;left:0;width:2px;background:#fff;border-radius:2px;box-shadow:0 0 0 3px rgba(255,255,255,.08)}
+@keyframes play{from{transform:translateX(0)}to{transform:translateX(100%)}}
+
+.pipeline{list-style:none;margin:10px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;position:relative}
+.pipeline li{display:flex;align-items:center;gap:8px;padding:10px 12px;border-radius:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);font-size:.76rem;color:#8EA0BD;transition:background .4s,color .4s,border-color .4s}
+.pipeline li .st{width:14px;height:14px;border-radius:50%;border:1.5px solid #4A5F82;flex:none;display:grid;place-items:center;transition:all .4s var(--ease)}
+.pipeline li.active{color:#fff;border-color:rgba(255,255,255,.16)}
+.pipeline li.active .st{border-color:#fff;animation:breathe 1.6s ease-in-out infinite}
+.pipeline li.done{color:#DDE5F1}
+.pipeline li.done .st{background:#E9EEF5;border-color:#E9EEF5}
+.pipeline li.done .st::after{content:"";width:5px;height:3px;border-left:1.5px solid var(--deep);border-bottom:1.5px solid var(--deep);transform:rotate(-45deg) translate(1px,-1px)}
+.qc-badge{position:absolute;right:10px;top:-38px;font-family:var(--mono);font-size:.7rem;color:#0B1628;background:#BFE8D0;padding:6px 10px;border-radius:999px;opacity:0;transform:translateY(8px) scale(.6);transition:transform .55s var(--spring),opacity .25s}
+.qc-badge.show{opacity:1;transform:none}
+
+.float-badge{position:absolute;left:-32px;top:44%;display:flex;align-items:center;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px 16px;box-shadow:var(--shadow);font-size:.85rem;color:var(--ink-2);animation:float 7s ease-in-out infinite}
+.float-badge .ic{color:var(--navy)}
+.float-badge b{font-family:var(--mono);font-weight:500;color:var(--ink)}
+@media (max-width:1000px){.float-badge{left:12px}}
+@media (max-width:480px){.pipeline{grid-template-columns:1fr}.qc-badge{top:auto;bottom:calc(100% + 6px)}.float-badge{position:relative;left:0;bottom:0;margin-top:14px;animation:none}.subtitle{font-size:.76rem;min-height:48px}.console-head .title{display:none}}
+
+/* =============================================================
+   5. MARQUEE (use cases)
+   ============================================================= */
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--surface);overflow:hidden;padding:22px 0}
+.marquee-track{display:flex;width:max-content;animation:marquee 38s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.marquee ul{display:flex;list-style:none;margin:0;padding:0}
+.marquee li{display:flex;align-items:center;gap:28px;padding-right:28px;font-size:clamp(1.05rem,1.8vw,1.35rem);font-weight:500;letter-spacing:-.02em;color:var(--ink-2);white-space:nowrap}
+.marquee li::after{content:"";width:7px;height:7px;background:var(--navy);transform:rotate(45deg);opacity:.55}
+@keyframes marquee{to{transform:translateX(-50%)}}
+
+/* =============================================================
+   6. PROBLEM — sticky heading + divided list (no cards)
+   ============================================================= */
+.split-sticky{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:80px;align-items:start}
+.split-sticky .sticky{position:sticky;top:112px}
+@media (max-width:900px){.split-sticky{grid-template-columns:1fr;gap:40px}.split-sticky .sticky{position:static}}
+.num-list{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.num-list li{display:grid;grid-template-columns:64px 1fr;gap:16px;padding:32px 0;border-bottom:1px solid var(--line)}
+.num-list .n{font-family:var(--mono);font-size:.85rem;color:var(--navy-2);padding-top:4px}
+.num-list h3{margin-bottom:8px}
+.num-list p{color:var(--muted);max-width:52ch}
+
+/* =============================================================
+   7. WHY AI — copy + flow panel with drawn rail
+   ============================================================= */
+.why{background:var(--surface)}
+.why-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:80px;align-items:center}
+@media (max-width:900px){.why-grid{grid-template-columns:1fr;gap:48px}}
+.why h2{margin-bottom:20px}
+.benefits{display:grid;grid-template-columns:1fr 1fr;gap:32px 28px;margin-top:44px}
+@media (max-width:560px){.benefits{grid-template-columns:1fr}}
+.benefit .ic{color:var(--navy);margin-bottom:12px;width:22px;height:22px}
+.benefit b{display:block;font-weight:600;margin-bottom:4px}
+.benefit span{color:var(--muted);font-size:.94rem}
+.flow{position:relative;background:var(--deep);border-radius:var(--r-lg);padding:36px 32px;color:var(--on-deep);box-shadow:inset 0 1px 0 rgba(255,255,255,.07)}
+.flow-head{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:#7F93B4;margin-bottom:12px}
+.flow ol{list-style:none;margin:0;padding:0;position:relative}
+.flow ol::before{content:"";position:absolute;left:17px;top:24px;bottom:24px;width:1px;background:rgba(255,255,255,.12)}
+.flow ol::after{content:"";position:absolute;left:17px;top:24px;bottom:24px;width:1px;background:#fff;transform:scaleY(0);transform-origin:top;transition:transform 1.6s var(--ease) .3s}
+.flow.in ol::after{transform:scaleY(1)}
+.flow li{position:relative;display:grid;grid-template-columns:36px 1fr;gap:18px;padding:18px 0}
+.flow .node{position:relative;z-index:1;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-family:var(--mono);font-size:.78rem;background:#13233D;border:1px solid rgba(255,255,255,.14);color:#fff}
+.flow li.human .node{background:#fff;color:var(--deep)}
+.flow b{color:#fff;font-weight:500;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.flow small{display:block;color:#9AA9C0;font-size:.9rem;margin-top:2px}
+.tag{font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:999px;border:1px solid rgba(255,255,255,.2);color:#C9D3E3}
+.flow li.human .tag{background:#fff;color:var(--deep);border-color:#fff}
+
+/* =============================================================
+   8. SERVICES — bento grid
+   ============================================================= */
+.head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-bottom:56px}
+.head-row .lead{max-width:44ch}
+.bento{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:minmax(200px,auto);gap:16px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:36px;position:relative;overflow:hidden;transition:transform .5s var(--ease),box-shadow .5s var(--ease)}
+.tile:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.tile p{color:var(--muted)}
+.tile h3{margin:14px 0 8px}
+.t-main{grid-column:span 4;grid-row:span 2;background:var(--navy);border-color:var(--navy);color:#C9D3E3;display:flex;flex-direction:column}
+.t-main h3{color:#fff;font-size:clamp(1.5rem,2.4vw,2rem);letter-spacing:-.035em;max-width:16ch}
+.t-main p{color:#B4C2D8;max-width:46ch}
+.t-edit,.t-stock{grid-column:span 2}
+.t-format,.t-nda{grid-column:span 3}
+.chip{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.7rem;letter-spacing:.05em;text-transform:uppercase;padding:5px 10px;border-radius:999px;background:var(--navy-soft);color:var(--navy)}
+.t-main .chip{background:rgba(255,255,255,.1);color:#fff;align-self:flex-start}
+.tile .ic-lg{width:26px;height:26px;stroke:var(--navy);stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.main-list{list-style:none;padding:0;margin:28px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
+.main-list li{padding:12px 0;border-top:1px solid rgba(255,255,255,.12);color:#E2E8F2;font-size:.95rem}
+.lang-switch{margin-top:auto;padding-top:32px;display:flex;align-items:center;gap:14px;font-size:.85rem;color:#9AAFD0}
+.lang-switch .pills{display:inline-flex;padding:4px;border-radius:999px;background:rgba(255,255,255,.08);position:relative}
+.lang-switch .pills span{position:relative;z-index:1;font-family:var(--mono);font-size:.75rem;padding:6px 14px;color:#fff;transition:color .4s}
+.lang-switch .pills::before{content:"";position:absolute;top:4px;bottom:4px;left:4px;width:calc(50% - 4px);border-radius:999px;background:#fff;animation:pill 5s var(--ease) infinite}
+.lang-switch .pills span:first-child{animation:pillTxtA 5s infinite}
+.lang-switch .pills span:last-child{animation:pillTxtB 5s infinite}
+@keyframes pill{0%,40%{transform:translateX(0)}50%,90%{transform:translateX(100%)}100%{transform:translateX(0)}}
+@keyframes pillTxtA{0%,40%{color:var(--navy)}50%,90%{color:#fff}100%{color:var(--navy)}}
+@keyframes pillTxtB{0%,40%{color:#fff}50%,90%{color:var(--navy)}100%{color:#fff}}
+.formats{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.formats span{font-family:var(--mono);font-size:.78rem;padding:7px 12px;border-radius:10px;border:1px solid var(--line);color:var(--ink-2);background:var(--bg)}
+.link-arrow{display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-weight:500;color:var(--navy)}
+.link-arrow .ic{width:16px;height:16px;transition:transform .4s var(--ease)}
+.link-arrow:hover .ic{transform:translateX(3px)}
+@media (max-width:1000px){.t-main{grid-column:span 6;grid-row:auto}.t-edit,.t-stock,.t-format,.t-nda{grid-column:span 3}}
+@media (max-width:767px){.bento{grid-template-columns:1fr}.t-main,.t-edit,.t-stock,.t-format,.t-nda{grid-column:auto}.tile{padding:28px}.main-list{grid-template-columns:1fr}}
+
+/* =============================================================
+   9. COMPARISON TABLE (dark)
+   ============================================================= */
+.compare-head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:end;margin-bottom:56px}
+@media (max-width:900px){.compare-head{grid-template-columns:1fr;gap:20px}}
+.table-wrap{overflow-x:auto;border-radius:var(--r);border:1px solid var(--deep-line);-webkit-overflow-scrolling:touch}
+.compare{width:100%;min-width:640px;border-collapse:collapse}
+.compare th,.compare td{text-align:left;padding:20px 24px;border-bottom:1px solid var(--deep-line);font-size:.96rem;vertical-align:top}
+.compare thead th{font-family:var(--mono);font-weight:400;font-size:.72rem;letter-spacing:.07em;text-transform:uppercase;color:#7F93B4}
+.compare thead th.us{color:#fff}
+.compare tbody th{font-weight:500;color:#fff;width:22%}
+.compare td{color:#8E9DB5}
+.compare td.us{color:#fff;background:rgba(255,255,255,.04)}
+.compare td.us .mono{color:#fff}
+.compare tr:last-child>*{border-bottom:0}
+.note{margin-top:20px;font-size:.88rem;color:#7F93B4;max-width:72ch}
+
+/* =============================================================
+   10. PROCESS — sticky heading + steps with progress rail
+   ============================================================= */
+.steps{list-style:none;margin:0;padding:0;position:relative}
+.steps::before,.steps .fill{content:"";position:absolute;left:23px;top:28px;bottom:28px;width:1px;background:var(--line)}
+.steps .fill{background:var(--navy);transform-origin:top;transform:scaleY(var(--p,0));transition:transform .9s var(--ease)}
+.step{position:relative;display:grid;grid-template-columns:48px 1fr;gap:24px;padding:28px 0}
+.step .dot{position:relative;z-index:1;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;font-family:var(--mono);font-size:.82rem;background:var(--bg);border:1px solid var(--line);color:var(--muted);transition:all .5s var(--ease)}
+.step.lit .dot{background:var(--navy);border-color:var(--navy);color:#fff}
+.step-top{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:8px}
+.step .day{font-family:var(--mono);font-size:.75rem;color:var(--navy-2);background:var(--navy-soft);padding:4px 10px;border-radius:999px}
+.step p{color:var(--muted);max-width:56ch}
+.promises{list-style:none;margin:36px 0 0;padding:0;border-top:1px solid var(--line)}
+.promises li{display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);font-weight:500}
+.promises .ic{color:var(--navy)}
+
+/* =============================================================
+   11. PORTFOLIO — varied grid, filter, skeleton + empty states
+   ============================================================= */
+.portfolio-sec{background:var(--surface)}
+.filters{display:flex;flex-wrap:wrap;gap:6px;padding:5px;border-radius:999px;background:var(--bg);border:1px solid var(--line)}
+.filter{border:0;background:transparent;padding:9px 16px;border-radius:999px;font:500 .88rem var(--font);color:var(--muted);cursor:pointer;transition:background .3s var(--ease),color .3s}
+.filter:hover{color:var(--ink)}
+.filter[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 2px rgba(15,23,36,.08),0 0 0 1px var(--line)}
+@media (max-width:767px){.filters{border-radius:16px}}
+.works{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.work{grid-column:span var(--span,6);transition:opacity .35s var(--ease),transform .5s var(--ease)}
+.work.out{opacity:0;transform:scale(.97)}
+.work[hidden]{display:none}
+.work-media{position:relative;height:clamp(220px,24vw,320px);border-radius:var(--r);overflow:hidden;background:var(--bg);border:1px solid var(--line);display:block;width:100%;padding:0;cursor:default;text-align:left;font:inherit;color:inherit}
+.work-media.video{cursor:pointer;background:var(--deep) center/cover no-repeat;border-color:var(--deep)}
+.work-media iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+/* Skeleton shimmer for "sample in production" placeholders */
+.skel{position:absolute;inset:0;padding:24px;display:flex;flex-direction:column;justify-content:flex-end;gap:10px}
+.skel i{display:block;height:10px;border-radius:6px;background:var(--line)}
+.skel i:nth-child(1){width:38%}.skel i:nth-child(2){width:62%}.skel i:nth-child(3){width:24%}
+.work-media:not(.video)::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.65) 50%,transparent 70%);transform:translateX(-100%);animation:shimmer 2.6s var(--ease) infinite;animation-delay:calc(var(--i,0) * 180ms)}
+@keyframes shimmer{to{transform:translateX(100%)}}
+.ph-label{position:absolute;top:16px;left:16px;display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.7rem;color:var(--muted);background:var(--surface);border:1px solid var(--line);padding:5px 10px;border-radius:999px;z-index:1}
+.ph-label i{width:6px;height:6px;border-radius:50%;background:#E5A33B;animation:breathe 2s infinite}
+.play-btn{position:absolute;left:20px;bottom:20px;width:56px;height:56px;border-radius:50%;background:#fff;display:grid;place-items:center;color:var(--navy);transition:transform .5s var(--spring)}
+.work-media.video:hover .play-btn{transform:scale(1.08)}
+.work-body{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:16px 4px 4px}
+.work-body h3{font-size:1rem}
+.work-body small{font-family:var(--mono);font-size:.72rem;color:var(--muted);white-space:nowrap}
+.empty[hidden]{display:none}
+.empty{grid-column:1/-1;border:1px dashed var(--line);border-radius:var(--r);padding:56px 24px;text-align:center;display:grid;justify-items:center;gap:12px}
+.empty .ic{width:28px;height:28px;color:var(--navy)}
+.empty p{color:var(--muted);max-width:44ch}
+@media (max-width:767px){.work{grid-column:1/-1 !important}.work-media{height:auto;aspect-ratio:16/10}}
+
+/* =============================================================
+   12. STOCK FOOTAGE — coming soon
+   ============================================================= */
+.stock{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:72px;align-items:center}
+@media (max-width:900px){.stock{grid-template-columns:1fr;gap:40px}}
+.tiles{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:84px;gap:10px}
+.tiles div{position:relative;overflow:hidden;border-radius:14px;background:linear-gradient(140deg,#24436F,#0E1D35);color:#E2E8F2;font-family:var(--mono);font-size:.68rem;padding:10px;display:flex;align-items:flex-end}
+.tiles div::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.12) 50%,transparent 65%);transform:translateX(-100%);animation:shimmer 4s var(--ease) infinite;animation-delay:calc(var(--i) * 400ms)}
+.tiles div:nth-child(1){grid-column:span 4;grid-row:span 2}
+.tiles div:nth-child(2){grid-column:span 2;grid-row:span 1;background:linear-gradient(140deg,#3A5884,#1A2C48)}
+.tiles div:nth-child(3){grid-column:span 2;background:linear-gradient(140deg,#1D2A3D,#0B1628)}
+.tiles div:nth-child(4){grid-column:span 2;background:linear-gradient(140deg,#2F4E7B,#13294B)}
+.tiles div:nth-child(5){grid-column:span 2;background:linear-gradient(140deg,#4A6896,#1E3A66)}
+.tiles div:nth-child(6){grid-column:span 2;background:linear-gradient(140deg,#16253B,#2A4672)}
+.stock h2{margin-bottom:18px}
+.wl-form{margin-top:32px;max-width:460px}
+.wl-row{display:flex;gap:10px}
+@media (max-width:480px){.wl-row{flex-direction:column}.wl-row .btn{width:100%}}
+
+/* =============================================================
+   13. PRICING — request a quote
+   ============================================================= */
+.pricing-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:72px;align-items:start}
+@media (max-width:900px){.pricing-grid{grid-template-columns:1fr;gap:40px}}
+.pricing-grid h2{margin-bottom:18px}
+.factors{list-style:none;margin:40px 0 0;padding:0;border-top:1px solid var(--line)}
+.factors li{display:grid;grid-template-columns:48px 1fr auto;gap:16px;align-items:baseline;padding:20px 0;border-bottom:1px solid var(--line)}
+.factors .n{font-family:var(--mono);font-size:.8rem;color:var(--navy-2)}
+.factors b{font-weight:600}
+.factors .fd{color:var(--muted);font-size:.93rem;text-align:right}
+@media (max-width:560px){.factors li{grid-template-columns:40px 1fr}.factors .fd{grid-column:2;text-align:left}}
+.includes{background:var(--navy);color:#C9D3E3;border-radius:var(--r-lg);padding:40px 36px;position:sticky;top:112px;box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}
+.includes h3{color:#fff;font-size:1.4rem;margin-bottom:8px}
+.includes>p{color:#9AAFD0;font-size:.95rem}
+.includes ul{list-style:none;margin:28px 0 32px;padding:0}
+.includes li{display:flex;gap:12px;padding:11px 0;border-top:1px solid rgba(255,255,255,.1);color:#E2E8F2;font-size:.95rem}
+.includes li .ic{color:#fff;width:18px;height:18px;margin-top:3px}
+.includes .btn{width:100%}
+@media (max-width:900px){.includes{position:static}}
+
+/* Testimonials (hidden until enabled in CONFIG) */
+.quotes{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.quote{grid-column:span 6;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:32px}
+.quote:first-child{grid-column:span 12}
+.quote p{font-size:1.15rem;letter-spacing:-.01em;color:var(--ink);margin-bottom:20px}
+.quote footer b{display:block}
+.quote footer span{color:var(--muted);font-size:.9rem}
+@media (max-width:767px){.quote{grid-column:1/-1}}
+
+/* =============================================================
+   14. FAQ
+   ============================================================= */
+.faq-sec{background:var(--surface)}
+.faq-sec .split-sticky{grid-template-columns:minmax(0,4fr) minmax(0,8fr)}
+@media (max-width:900px){.faq-sec .split-sticky{grid-template-columns:1fr}}
+.faq-sec .sticky p{color:var(--muted);margin-top:16px}
+.faq-list{border-top:1px solid var(--line)}
+.faq-item{border-bottom:1px solid var(--line)}
+.faq-q{width:100%;display:flex;justify-content:space-between;align-items:center;gap:20px;background:none;border:0;padding:24px 0;text-align:left;cursor:pointer;font:500 1.08rem var(--font);letter-spacing:-.01em;color:var(--ink)}
+.faq-q .pm{position:relative;width:28px;height:28px;border-radius:50%;border:1px solid var(--line);flex:none;transition:transform .5s var(--ease),background .3s,border-color .3s}
+.faq-q .pm::before,.faq-q .pm::after{content:"";position:absolute;top:50%;left:50%;width:10px;height:1.5px;background:var(--ink);transform:translate(-50%,-50%)}
+.faq-q .pm::after{transform:translate(-50%,-50%) rotate(90deg)}
+.faq-q[aria-expanded="true"] .pm{transform:rotate(45deg);background:var(--navy);border-color:var(--navy)}
+.faq-q[aria-expanded="true"] .pm::before,.faq-q[aria-expanded="true"] .pm::after{background:#fff}
+.faq-a{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s var(--ease)}
+.faq-a>div{overflow:hidden}
+.faq-a p{color:var(--muted);padding:0 48px 24px 0;max-width:64ch}
+.faq-q[aria-expanded="true"]+.faq-a{grid-template-rows:1fr}
+
+/* =============================================================
+   15. CONTACT FORM (dark)
+   ============================================================= */
+.contact{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:80px;align-items:start}
+@media (max-width:900px){.contact{grid-template-columns:1fr;gap:48px}}
+.contact h2{margin-bottom:20px}
+.contact-lines{list-style:none;margin:40px 0 32px;padding:0;border-top:1px solid var(--deep-line)}
+.contact-lines li{border-bottom:1px solid var(--deep-line)}
+.contact-lines a{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;color:#fff;transition:padding .4s var(--ease)}
+.contact-lines a:hover{padding-left:6px}
+.contact-lines small{display:block;font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:#7F93B4;margin-bottom:2px}
+.contact-lines .ic{color:#7F93B4}
+.form-card{background:var(--surface);color:var(--ink);border-radius:var(--r-lg);padding:40px;box-shadow:0 40px 80px -30px rgba(0,0,0,.5)}
+@media (max-width:560px){.form-card{padding:24px}}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px 16px}
+.form-grid .full{grid-column:1/-1}
+@media (max-width:560px){.form-grid{grid-template-columns:1fr}}
+.field{display:grid;gap:8px;align-content:start}
+.field label{font-size:.88rem;font-weight:500;color:var(--ink)}
+.field label .opt{color:var(--muted);font-weight:400}
+.field input,.field select,.field textarea{width:100%;font:inherit;font-size:.97rem;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:var(--r-sm);padding:13px 14px;transition:border-color .25s,background .25s,box-shadow .25s;-webkit-appearance:none;appearance:none}
+.field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1.5l5 5 5-5' stroke='%23667085' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px}
+.field textarea{min-height:128px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--navy-2);background:var(--surface);box-shadow:0 0 0 4px var(--navy-soft)}
+.field [aria-invalid="true"]{border-color:var(--danger);background:#FFF8F7}
+.help{font-size:.8rem;color:var(--muted)}
+.err{font-size:.8rem;color:var(--danger);min-height:0}
+.err:empty{display:none}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.form-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:28px}
+.form-foot p{font-size:.82rem;color:var(--muted);max-width:30ch}
+.form-alert{margin-top:16px;padding:12px 14px;border-radius:var(--r-sm);font-size:.9rem;background:#FEF3F2;color:var(--danger);border:1px solid #FECDCA}
+.form-alert:empty{display:none}
+/* Loading state: shimmer bar inside the button */
+.btn.is-loading{pointer-events:none;background:var(--navy-2)}
+.btn.is-loading::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent 30%,rgba(255,255,255,.22) 50%,transparent 70%);transform:translateX(-100%);animation:shimmer 1.1s linear infinite}
+.success{display:none;text-align:left}
+.success .badge-ok{width:52px;height:52px;border-radius:16px;background:var(--navy-soft);color:var(--navy);display:grid;place-items:center;margin-bottom:24px;animation:pop .7s var(--spring)}
+@keyframes pop{from{transform:scale(.4);opacity:0}to{transform:none;opacity:1}}
+.success h3{font-size:1.5rem;margin-bottom:10px}
+.success p{color:var(--muted);margin-bottom:28px;max-width:44ch}
+.form-card.done form{display:none}
+.form-card.done .success{display:block}
+
+/* =============================================================
+   16. FOOTER
+   ============================================================= */
+.footer{background:#0C1018;color:#8C95A6;padding:72px 0 40px;font-size:.92rem}
+.footer-top{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,1fr);gap:40px}
+@media (max-width:767px){.footer-top{grid-template-columns:1fr 1fr}.footer-top>div:first-child{grid-column:1/-1}.footer{padding-bottom:110px}}
+.footer .wordmark{color:#fff}
+.footer p{margin-top:14px;max-width:36ch}
+.footer h4{margin:0 0 14px;font-family:var(--mono);font-weight:400;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#5F6878}
+.footer ul{list-style:none;margin:0;padding:0}
+.footer li{padding:5px 0}
+.footer a:hover{color:#fff}
+.footer-bottom{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:56px;padding-top:24px;border-top:1px solid #1C222D;font-size:.82rem}
+
+/* =============================================================
+   17. FLOATING WHATSAPP + MOBILE STICKY BAR
+   ============================================================= */
+.wa-float{position:fixed;right:24px;bottom:24px;z-index:50;width:56px;height:56px;border-radius:50%;background:var(--wa);color:#fff;display:grid;place-items:center;box-shadow:0 16px 32px -12px rgba(15,23,36,.45);transition:transform .5s var(--spring)}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:28px;height:28px}
+.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;border:1.5px solid var(--wa);animation:ring 2.8s var(--ease) infinite}
+@keyframes ring{from{transform:scale(1);opacity:.6}to{transform:scale(1.55);opacity:0}}
+.mobile-bar{display:none}
+@media (max-width:900px){
+  .wa-float{display:none}
+  .mobile-bar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:50;padding:12px 16px calc(12px + env(safe-area-inset-bottom));background:rgba(255,255,255,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .5s var(--ease)}
+  .mobile-bar.show{transform:none}
+  .mobile-bar .btn{height:48px;padding:0 12px}
+}
+
+/* Respect reduced-motion settings */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms !important;animation-iteration-count:1 !important;transition-duration:.001ms !important}
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Icon set (stroke 1.5, used via <use href="#name">) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></symbol>
+    <symbol id="loop" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.6-5.9L20 8.5"/><path d="M20 4v4.5h-4.5"/></symbol>
+    <symbol id="globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></symbol>
+    <symbol id="shield" viewBox="0 0 24 24"><path d="M12 21s7.5-3.6 7.5-9.4V5.6L12 3 4.5 5.6v6C4.5 17.4 12 21 12 21z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="spark" viewBox="0 0 24 24"><path d="M12 3.5l1.8 4.9 4.9 1.8-4.9 1.8L12 16.9l-1.8-4.9-4.9-1.8 4.9-1.8z"/><path d="M18.5 15.5v4M16.5 17.5h4"/></symbol>
+    <symbol id="cut" viewBox="0 0 24 24"><circle cx="6" cy="6.5" r="2.5"/><circle cx="6" cy="17.5" r="2.5"/><path d="M20 5 8 15.5M14.5 13.5 20 19M8 8.5 11.5 11.5"/></symbol>
+    <symbol id="film" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7.5 4v16M16.5 4v16M3 9h4.5M3 15h4.5M16.5 9H21M16.5 15H21"/></symbol>
+    <symbol id="file" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></symbol>
+    <symbol id="lock" viewBox="0 0 24 24"><rect x="4.5" y="10.5" width="15" height="10" rx="2"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13.5 6.5 19 12l-5.5 5.5"/></symbol>
+    <symbol id="arrow-up" viewBox="0 0 24 24"><path d="M7 17 17 7M8.5 7H17v8.5"/></symbol>
+    <symbol id="mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6.5 8.5-6.5"/></symbol>
+    <symbol id="menu" viewBox="0 0 24 24"><path d="M4 8h16M4 16h16"/></symbol>
+    <symbol id="play" viewBox="0 0 24 24"><path d="M8 5.5v13l10.5-6.5z" fill="currentColor"/></symbol>
+    <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></symbol>
+  </defs>
+</svg>
+
+<a class="sr-only skip" href="#main">Skip to content</a>
+<div id="topSentinel" style="position:absolute;top:0;height:8px;width:1px" aria-hidden="true"></div>
+
+<!-- ================= NAVBAR ================= -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="wordmark" aria-label="Vokara home">VOKARA</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#portfolio">Work</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <div class="nav-cta"><a href="#contact" class="btn btn-primary btn-sm" data-magnetic>Get a quote</a></div>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><svg class="ic"><use href="#menu"/></svg></button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow reveal">AI video production for companies</p>
+      <h1 class="reveal" style="--i:1">AI-powered safety &amp; training videos, <span class="soft">delivered in 3–5 days.</span></h1>
+      <p class="lead reveal" style="--i:2">Vokara turns your HSE procedures, SOPs, and training materials into clear, engaging videos — faster and more affordable than traditional production, with every frame reviewed by a professional editor.</p>
+      <div class="cta-row reveal" style="--i:3">
+        <a href="#contact" class="btn btn-primary" data-magnetic>Get a free quote <svg class="ic arrow"><use href="#arrow"/></svg></a>
+        <a href="#process" class="btn btn-ghost" data-magnetic>See how it works</a>
+      </div>
+      <dl class="hero-stats reveal" style="--i:4">
+        <div><dt>Turnaround</dt><dd>3–5 days</dd></div>
+        <div><dt>Free revisions</dt><dd>3</dd></div>
+        <div><dt>Languages</dt><dd>EN / ID</dd></div>
+      </dl>
+    </div>
+
+    <!-- Live production console (decorative). Can be replaced with your showreel later. -->
+    <div class="hero-visual reveal" style="--i:2" aria-hidden="true">
+      <div class="console">
+        <div class="console-head">
+          <span class="id mono">VKR-0142</span>
+          <span class="title">Working at Height — Site Induction</span>
+          <span class="live"><i></i>In production</span>
+        </div>
+        <div class="frame">
+          <svg class="scene" viewBox="0 0 320 180" fill="none" preserveAspectRatio="xMidYMid slice">
+            <path d="M0 150h320" stroke="rgba(255,255,255,.18)"/>
+            <g stroke="rgba(255,255,255,.28)" stroke-width="1.5">
+              <path d="M180 34v116M226 34v116M272 34v116M180 34h92M180 74h92M180 112h92M180 74l46 38M226 74l46 38M226 34l46 40"/>
+            </g>
+            <g stroke="rgba(255,255,255,.12)"><path d="M180 34l46 40M180 112l46 38"/></g>
+            <g class="figure">
+              <path d="M150 62c0-9 6-15 14-15s14 6 14 15" fill="#E9EEF5"/>
+              <rect x="147" y="61" width="34" height="4" rx="2" fill="#E9EEF5"/>
+              <circle cx="164" cy="74" r="9" fill="#C9D3E3"/>
+              <path d="M150 94c0-6 6-10 14-10s14 4 14 10v28h-28z" fill="#3B5F92"/>
+              <path d="M152 96l24 22M176 96l-24 22" stroke="#E5A33B" stroke-width="2.5"/>
+              <path d="M176 100c8 0 4-26 4-26" stroke="#E5A33B" stroke-width="1.5" stroke-dasharray="3 3"/>
+              <path d="M154 122v28M174 122v28" stroke="#3B5F92" stroke-width="7" stroke-linecap="round"/>
+            </g>
+          </svg>
+          <span class="frame-tag mono">SCENE 03 / 07</span>
+          <div class="subtitle"><span class="lang mono" id="subLang">EN</span><span><span id="subText">Before you climb, check your harness, buckle, and lanyard.</span><span class="caret"></span></span></div>
+        </div>
+        <div class="timeline">
+          <span class="lbl mono">V1</span>
+          <div class="lanes" style="grid-row:span 3">
+            <div class="lane"><i style="left:0;width:21%"></i><i style="left:22%;width:30%"></i><i style="left:53%;width:18%"></i><i style="left:72%;width:28%"></i></div>
+            <div class="lane a"><i style="left:3%;width:44%"></i><i style="left:49%;width:47%"></i></div>
+            <div class="lane s"><i style="left:4%;width:14%"></i><i style="left:20%;width:12%"></i><i style="left:34%;width:16%"></i><i style="left:54%;width:13%"></i><i style="left:70%;width:17%"></i></div>
+            <div class="rail"></div>
+          </div>
+          <span class="lbl mono">A1</span>
+          <span class="lbl mono">S1</span>
+        </div>
+        <ol class="pipeline" id="pipeline">
+          <li class="active"><span class="st"></span>Script approved</li>
+          <li><span class="st"></span>AI visuals &amp; voice</li>
+          <li><span class="st"></span>Editor QC</li>
+          <span class="qc-badge" id="qcBadge">QC passed</span>
+        </ol>
+      </div>
+      <div class="float-badge"><svg class="ic"><use href="#loop"/></svg><span>Revision <b>1 / 3</b> included</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee" aria-label="Video types we produce">
+  <div class="marquee-track">
+    <ul><li>Safety induction</li><li>HSE refreshers</li><li>SOP walkthroughs</li><li>Employee onboarding</li><li>Product explainers</li><li>Bahasa Indonesia &amp; English</li><li>Social media cut-downs</li></ul>
+    <ul aria-hidden="true"><li>Safety induction</li><li>HSE refreshers</li><li>SOP walkthroughs</li><li>Employee onboarding</li><li>Product explainers</li><li>Bahasa Indonesia &amp; English</li><li>Social media cut-downs</li></ul>
+  </div>
+</div>
+
+<!-- ================= PROBLEM ================= -->
+<section id="problem">
+  <div class="wrap split-sticky">
+    <div class="sticky reveal">
+      <p class="eyebrow">The problem</p>
+      <h2>Training videos shouldn't take months — or be skipped by the people who need them.</h2>
+    </div>
+    <ol class="num-list">
+      <li class="reveal"><span class="n">01</span><div><h3>Slow and expensive to produce</h3><p>Traditional shoots need crews, locations, actors, and weeks of scheduling — just for a few minutes of footage.</p></div></li>
+      <li class="reveal" style="--i:1"><span class="n">02</span><div><h3>Painful to update</h3><p>When a procedure, regulation, or site layout changes, re-shooting is costly. So outdated videos stay in use.</p></div></li>
+      <li class="reveal" style="--i:2"><span class="n">03</span><div><h3>Boring, so nobody pays attention</h3><p>Slide decks read aloud don't stick. Workers tune out, and the safety message gets lost.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= WHY AI VIDEO ================= -->
+<section class="why" id="why-ai">
+  <div class="wrap why-grid">
+    <div>
+      <p class="eyebrow reveal">Why AI video?</p>
+      <h2 class="reveal" style="--i:1">AI makes it fast. A professional editor makes it right.</h2>
+      <p class="lead reveal" style="--i:2">AI lets us produce visuals, voice-overs, and language versions in days instead of weeks. But we never ship raw AI output — every script, scene, and subtitle is checked by an experienced video editor.</p>
+      <div class="benefits">
+        <div class="benefit reveal" style="--i:1"><svg class="ic"><use href="#clock"/></svg><b>Faster turnaround</b><span>No crew, no location, no reshoots. Most videos ship in 3–5 working days.</span></div>
+        <div class="benefit reveal" style="--i:2"><svg class="ic"><use href="#globe"/></svg><b>Multilingual by default</b><span>English and Bahasa Indonesia versions from one production.</span></div>
+        <div class="benefit reveal" style="--i:3"><svg class="ic"><use href="#loop"/></svg><b>Easy to update</b><span>Procedure changed? We update the scene, not the whole video.</span></div>
+        <div class="benefit reveal" style="--i:4"><svg class="ic"><use href="#shield"/></svg><b>Accuracy you sign off on</b><span>Content follows your approved SOP. Nothing goes out without your approval.</span></div>
+      </div>
+    </div>
+    <div class="flow reveal" style="--i:2">
+      <p class="flow-head">Our production flow</p>
+      <ol>
+        <li class="human"><span class="node">01</span><div><b>Your materials &amp; brief <span class="tag">Human</span></b><small>SOPs, slides, site photos, key safety rules.</small></div></li>
+        <li class="human"><span class="node">02</span><div><b>Script &amp; storyboard <span class="tag">Human</span></b><small>Written for clarity, approved by you.</small></div></li>
+        <li><span class="node">03</span><div><b>Visuals &amp; voice-over <span class="tag">AI</span></b><small>Generated quickly in your chosen style and language.</small></div></li>
+        <li class="human"><span class="node">04</span><div><b>Edit &amp; quality control <span class="tag">Human</span></b><small>Professional editing, timing, subtitles, and accuracy checks.</small></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SERVICES (bento) ================= -->
+<section id="services">
+  <div class="wrap">
+    <div class="head-row">
+      <div>
+        <p class="eyebrow reveal">Services</p>
+        <h2 class="reveal" style="--i:1">What we make for you</h2>
+      </div>
+      <p class="lead reveal" style="--i:2">AI-powered corporate video as the core, backed by hands-on editing and design.</p>
+    </div>
+    <div class="bento">
+      <article class="tile t-main reveal">
+        <span class="chip">Main service</span>
+        <h3>AI video production for safety, training &amp; SOPs</h3>
+        <p>Corporate videos produced with AI and finished by a professional editor — built from the material you already have.</p>
+        <ul class="main-list">
+          <li>Safety induction &amp; HSE</li>
+          <li>Training &amp; onboarding</li>
+          <li>SOP &amp; procedure guides</li>
+          <li>Company &amp; product explainers</li>
+        </ul>
+        <div class="lang-switch"><span class="pills"><span>EN</span><span>ID</span></span>One project, two language versions</div>
+      </article>
+      <article class="tile t-edit reveal" style="--i:1">
+        <svg class="ic-lg"><use href="#cut"/></svg>
+        <h3>Video editing &amp; design</h3>
+        <p>Manual editing, motion graphics, social content, and graphic design for footage and brands you already have.</p>
+      </article>
+      <article class="tile t-stock reveal" style="--i:2">
+        <span class="chip">Coming soon</span>
+        <h3>AI stock footage</h3>
+        <p>Original AI-generated clips, created in-house.</p>
+        <a href="#stock" class="link-arrow">Get notified <svg class="ic"><use href="#arrow"/></svg></a>
+      </article>
+      <article class="tile t-format reveal" style="--i:1">
+        <svg class="ic-lg"><use href="#file"/></svg>
+        <h3>Delivered in the formats you need</h3>
+        <div class="formats"><span>MP4 1080p</span><span>16:9 · 9:16 · 1:1</span><span>.SRT subtitles</span><span>LMS-ready</span></div>
+      </article>
+      <article class="tile t-nda reveal" style="--i:2">
+        <svg class="ic-lg"><use href="#lock"/></svg>
+        <h3>Confidential by default</h3>
+        <p>Your SOPs and site materials are used only for your project. NDA available on request.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= AI VS TRADITIONAL ================= -->
+<section class="dark" id="compare">
+  <div class="wrap">
+    <div class="compare-head">
+      <div>
+        <p class="eyebrow reveal">AI vs traditional</p>
+        <h2 class="reveal" style="--i:1">Same goal. A faster, more flexible way to get there.</h2>
+      </div>
+      <p class="lead reveal" style="--i:2">How an AI-powered production compares with a traditional video shoot.</p>
+    </div>
+    <div class="table-wrap reveal" style="--i:2">
+      <table class="compare">
+        <thead><tr><th scope="col"><span class="sr-only">Aspect</span></th><th scope="col">Traditional production</th><th scope="col" class="us">Vokara AI production</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Turnaround</th><td>Several weeks</td><td class="us"><span class="mono">3–5</span> working days for a <span class="mono">1–3</span> min video</td></tr>
+          <tr><th scope="row">What you provide</th><td>Crew, actors, location, equipment</td><td class="us">Your brief and existing materials</td></tr>
+          <tr><th scope="row">Cost</th><td>High — shoot days add up</td><td class="us">More affordable, no shoot costs</td></tr>
+          <tr><th scope="row">Revisions</th><td>Limited; changes may need reshoots</td><td class="us"><span class="mono">3</span> free revisions included</td></tr>
+          <tr><th scope="row">Language versions</th><td>Re-record or re-shoot per language</td><td class="us">English &amp; Bahasa Indonesia from one project</td></tr>
+          <tr><th scope="row">Updating later</th><td>Often a new production</td><td class="us">Update only the scenes that change</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note reveal">Traditional production is still the right choice for some projects, like real on-site footage or interviews. We'll tell you honestly which fits.</p>
+  </div>
+</section>
+
+<!-- ================= PROCESS ================= -->
+<section id="process">
+  <div class="wrap split-sticky">
+    <div class="sticky">
+      <p class="eyebrow reveal">How it works</p>
+      <h2 class="reveal" style="--i:1">From brief to finished video in four steps.</h2>
+      <ul class="promises reveal" style="--i:2">
+        <li><svg class="ic"><use href="#clock"/></svg>Ready in 3–5 working days</li>
+        <li><svg class="ic"><use href="#loop"/></svg>3 free revisions</li>
+        <li><svg class="ic"><use href="#shield"/></svg>Your materials kept confidential</li>
+      </ul>
+    </div>
+    <ol class="steps" id="steps">
+      <span class="fill" aria-hidden="true"></span>
+      <li class="step"><span class="dot">01</span><div><div class="step-top"><h3>Brief</h3><span class="day">Day 1</span></div><p>Send your SOP, slides, or key points. We clarify goals, audience, length, and language.</p></div></li>
+      <li class="step"><span class="dot">02</span><div><div class="step-top"><h3>Script &amp; storyboard</h3><span class="day">Day 1–2</span></div><p>We write the script and plan each scene. You review and approve before production starts.</p></div></li>
+      <li class="step"><span class="dot">03</span><div><div class="step-top"><h3>Production</h3><span class="day">Day 2–4</span></div><p>AI visuals and voice-over are generated, then edited, timed, and subtitled by our editor.</p></div></li>
+      <li class="step"><span class="dot">04</span><div><div class="step-top"><h3>Revision &amp; delivery</h3><span class="day">Day 3–5</span></div><p>Review the draft, request changes, and receive final files in the formats you need.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= PORTFOLIO ================= -->
+<!-- Edit items in CONFIG.portfolio at the bottom of this file. -->
+<section class="portfolio-sec" id="portfolio">
+  <div class="wrap">
+    <div class="head-row">
+      <div>
+        <p class="eyebrow reveal">Selected work</p>
+        <h2 class="reveal" style="--i:1">Recent projects</h2>
+      </div>
+      <div class="filters reveal" id="filters" role="group" aria-label="Filter projects" style="--i:2"></div>
+    </div>
+    <div class="works" id="works"></div>
+  </div>
+</section>
+
+<!-- ================= AI STOCK FOOTAGE ================= -->
+<section id="stock">
+  <div class="wrap stock">
+    <div class="tiles reveal" aria-hidden="true">
+      <div style="--i:0">Industrial / 4K</div><div style="--i:1">Workplace</div><div style="--i:2">Energy</div>
+      <div style="--i:3">Technology</div><div style="--i:4">Abstract</div><div style="--i:5">Safety</div>
+    </div>
+    <div>
+      <p class="eyebrow reveal">Coming soon</p>
+      <h2 class="reveal" style="--i:1">Original AI stock footage by Vokara</h2>
+      <p class="lead reveal" style="--i:2">A growing library of AI-generated clips created in-house — industrial sites, workplaces, technology, and abstract backgrounds. Be first to know when it launches.</p>
+      <form class="wl-form reveal" id="waitlistForm" novalidate style="--i:3">
+        <div class="field">
+          <label for="wl-email">Work email</label>
+          <div class="wl-row">
+            <input type="email" id="wl-email" name="email" placeholder="you@company.com" autocomplete="email" aria-describedby="wl-help err-wl" required>
+            <button type="submit" class="btn btn-primary" data-magnetic>Notify me</button>
+          </div>
+          <span class="help" id="wl-help">One email at launch. No spam.</span>
+          <span class="err" id="err-wl" role="alert"></span>
+        </div>
+        <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section class="why" id="pricing">
+  <div class="wrap pricing-grid">
+    <div>
+      <p class="eyebrow reveal">Pricing</p>
+      <h2 class="reveal" style="--i:1">Every project is quoted to fit your needs.</h2>
+      <p class="lead reveal" style="--i:2">No one-size-fits-all packages. Tell us what you need and we'll send a clear, fixed quote — usually within one working day.</p>
+      <ol class="factors">
+        <li class="reveal"><span class="n">01</span><b>Video length</b><span class="fd">Short clips to 5+ minute modules</span></li>
+        <li class="reveal" style="--i:1"><span class="n">02</span><b>Languages</b><span class="fd">One or several language versions</span></li>
+        <li class="reveal" style="--i:2"><span class="n">03</span><b>Visual style</b><span class="fd">Simple motion to fully animated scenes</span></li>
+        <li class="reveal" style="--i:3"><span class="n">04</span><b>Number of videos</b><span class="fd">Series and bulk projects get better rates</span></li>
+      </ol>
+    </div>
+    <aside class="includes reveal" style="--i:2">
+      <h3>Every project includes</h3>
+      <p>Whatever the size, the essentials are always covered.</p>
+      <ul>
+        <li><svg class="ic"><use href="#check"/></svg>Free consultation &amp; quote</li>
+        <li><svg class="ic"><use href="#check"/></svg>Script &amp; storyboard for your approval</li>
+        <li><svg class="ic"><use href="#check"/></svg>Professional editing &amp; quality control</li>
+        <li><svg class="ic"><use href="#check"/></svg>3 free revisions</li>
+        <li><svg class="ic"><use href="#check"/></svg>Full HD files in the formats you need</li>
+      </ul>
+      <a href="#contact" class="btn btn-light" data-magnetic>Request a free quote <svg class="ic arrow"><use href="#arrow"/></svg></a>
+    </aside>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS (hidden until enabled) ================= -->
+<!-- To show: set CONFIG.showTestimonials = true and add REAL feedback in CONFIG.testimonials. -->
+<section id="testimonials" hidden>
+  <div class="wrap">
+    <p class="eyebrow">Testimonials</p>
+    <h2 style="margin-bottom:48px">What clients say</h2>
+    <div class="quotes" id="quotes"></div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="faq-sec" id="faq">
+  <div class="wrap split-sticky">
+    <div class="sticky reveal">
+      <p class="eyebrow">FAQ</p>
+      <h2>Questions, answered.</h2>
+      <p>Can't find what you need? <a href="#" data-wa class="link-arrow" style="margin-top:0">Ask us on WhatsApp <svg class="ic"><use href="#arrow"/></svg></a></p>
+    </div>
+    <div class="faq-list reveal" style="--i:1">
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">What do you need from us to start?<span class="pm"></span></button><div class="faq-a"><div><p>Just your existing material — an SOP document, presentation slides, a safety checklist, or even bullet points. Photos of your site or your logo help too. We handle the script, visuals, and editing.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">How long does a project take?<span class="pm"></span></button><div class="faq-a"><div><p>A 1–3 minute video is typically delivered in 3–5 working days after the brief is confirmed. Longer videos or series are scheduled together with you.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Will an AI video look professional?<span class="pm"></span></button><div class="faq-a"><div><p>Yes. AI is only one part of our process. Every video is scripted, edited, timed, and checked by an experienced video editor before you see it.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">How many revisions are included?<span class="pm"></span></button><div class="faq-a"><div><p>Every project includes 3 free revision rounds. Additional revisions or major changes in scope can be quoted separately.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Is our company material kept confidential?<span class="pm"></span></button><div class="faq-a"><div><p>Yes. Your documents and final videos are used only for your project. We're happy to sign an NDA, and we never publish client work without permission.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Which languages are available?<span class="pm"></span></button><div class="faq-a"><div><p>English and Bahasa Indonesia are standard. Other languages can be added — just mention it when you request a quote.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">Do you also do traditional, non-AI video work?<span class="pm"></span></button><div class="faq-a"><div><p>Yes. We offer manual video editing, motion graphics, and graphic design for footage and brand assets you already have.</p></div></div></div>
+      <div class="faq-item"><button class="faq-q" aria-expanded="false">How does payment work?<span class="pm"></span></button><div class="faq-a"><div><p>After you approve the quote, we usually work with a down payment before production and the balance before final delivery. Company invoices are available.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="dark" id="contact">
+  <div class="wrap contact">
+    <div>
+      <p class="eyebrow reveal">Get started</p>
+      <h2 class="reveal" style="--i:1">Let's make your next training video the one people actually watch.</h2>
+      <p class="lead reveal" style="--i:2">Tell us about your project and get a free quote — usually within one working day.</p>
+      <ul class="contact-lines reveal" style="--i:3">
+        <li><a href="#" data-wa><span><small>WhatsApp</small><span data-wa-display></span></span><svg class="ic"><use href="#arrow-up"/></svg></a></li>
+        <li><a href="#" data-email-link><span><small>Email</small><span data-email></span></span><svg class="ic"><use href="#arrow-up"/></svg></a></li>
+      </ul>
+    </div>
+
+    <div class="form-card reveal" id="formCard" style="--i:2">
+      <form id="quoteForm" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="f-name">Full name</label>
+            <input id="f-name" name="name" maxlength="100" autocomplete="name" aria-describedby="err-name" required>
+            <span class="err" id="err-name" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="f-company">Company <span class="opt">(optional)</span></label>
+            <input id="f-company" name="company" maxlength="120" autocomplete="organization">
+          </div>
+          <div class="field">
+            <label for="f-email">Work email</label>
+            <input id="f-email" name="email" type="email" maxlength="150" autocomplete="email" aria-describedby="err-email" required>
+            <span class="err" id="err-email" role="alert"></span>
+          </div>
+          <div class="field">
+            <label for="f-wa">WhatsApp <span class="opt">(optional)</span></label>
+            <input id="f-wa" name="whatsapp" type="tel" maxlength="30" autocomplete="tel" placeholder="+62" aria-describedby="help-wa">
+            <span class="help" id="help-wa">For a faster reply.</span>
+          </div>
+          <div class="field full">
+            <label for="f-service">Service</label>
+            <select id="f-service" name="service" aria-describedby="err-service" required>
+              <option value="">Select a service</option>
+              <option>AI Safety Induction / HSE Video</option>
+              <option>AI Training / SOP / Onboarding Video</option>
+              <option>AI Company or Product Explainer</option>
+              <option>Video Editing (manual)</option>
+              <option>Motion Graphics / Graphic Design</option>
+              <option>Other</option>
+            </select>
+            <span class="err" id="err-service" role="alert"></span>
+          </div>
+          <div class="field full">
+            <label for="f-msg">Project details</label>
+            <textarea id="f-msg" name="message" maxlength="2000" placeholder="A 2-minute safety induction video for new site workers, in English and Bahasa Indonesia." aria-describedby="help-msg err-message" required></textarea>
+            <span class="help" id="help-msg">Length, audience, language, and deadline help us quote accurately.</span>
+            <span class="err" id="err-message" role="alert"></span>
+          </div>
+        </div>
+        <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-alert" id="formAlert" role="alert"></div>
+        <div class="form-foot">
+          <p>We reply within one working day. Your information is never shared.</p>
+          <button type="submit" class="btn btn-primary" id="submitBtn" data-magnetic><span class="btn-label">Request a free quote</span> <svg class="ic arrow"><use href="#arrow"/></svg></button>
+        </div>
+      </form>
+
+      <div class="success" role="status" aria-live="polite">
+        <div class="badge-ok"><svg class="ic"><use href="#check"/></svg></div>
+        <h3 tabindex="-1" id="successTitle">Request received.</h3>
+        <p>We'll reply by email within one working day. Want a faster answer? Continue the conversation on WhatsApp — your project summary is already filled in.</p>
+        <a href="#" class="btn btn-wa" id="waContinue" target="_blank" rel="noopener"><svg class="ic"><use href="#wa"/></svg>Continue on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <span class="wordmark">VOKARA</span>
+        <p>AI-powered safety, training, and corporate video production — reviewed by a professional editor.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul><li><a href="#services">Services</a></li><li><a href="#process">Process</a></li><li><a href="#portfolio">Work</a></li><li><a href="#faq">FAQ</a></li></ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul id="contactList"><li><a href="#" data-wa>WhatsApp</a></li><li><a href="#" data-email-link>Email</a></li></ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Vokara. All rights reserved.</span><span class="mono">Indonesia</span></div>
+  </div>
+</footer>
+
+<a href="#" class="wa-float" data-wa aria-label="Chat with Vokara on WhatsApp"><svg><use href="#wa"/></svg></a>
+<div class="mobile-bar" id="mobileBar">
+  <a href="#" class="btn btn-wa" data-wa><svg class="ic"><use href="#wa"/></svg>WhatsApp</a>
+  <a href="#contact" class="btn btn-primary">Get a quote</a>
+</div>
+
+<script>
+/* =============================================================
+   CONFIG — EDIT YOUR CONTENT HERE
+   ============================================================= */
+const CONFIG = {
+  // WhatsApp: country code + number, no "+", spaces, or dashes
+  whatsapp: "6289523655264",
+  whatsappDisplay: "+62 895-2365-5264",
+  whatsappMessage: "Hi Vokara, I'd like to ask about a video project.",
+
+  // Public contact email
+  email: "utomofirdianto@gmail.com",
+
+  // Social media — add a URL to show it in the footer, leave "" to hide
+  social: { Instagram: "", LinkedIn: "", YouTube: "", TikTok: "" },
+
+  /* PORTFOLIO
+     category: must match one of portfolioCategories
+     video:    YouTube video ID (the part after "v=" in the link), or "" for a placeholder
+     Example:  { title: "Working at Height Induction", category: "Safety & HSE", video: "abc123XYZ" } */
+  portfolioCategories: ["All", "Safety & HSE", "Training & SOP", "Explainer", "Editing & Design"],
+  portfolio: [
+    { title: "Safety induction sample", category: "Safety & HSE", video: "" },
+    { title: "SOP walkthrough sample", category: "Training & SOP", video: "" },
+    { title: "HSE awareness sample", category: "Safety & HSE", video: "" },
+    { title: "Onboarding sample", category: "Training & SOP", video: "" },
+    { title: "Product explainer sample", category: "Explainer", video: "" },
+    { title: "Edited content sample", category: "Editing & Design", video: "" }
+  ],
+
+  /* TESTIMONIALS — only REAL client feedback, with their permission. */
+  showTestimonials: false,
+  testimonials: [
+    { quote: "Client feedback goes here.", name: "Client name", role: "Role, Company" }
+  ]
+};
+
+/* =============================================================
+   APP CODE — you normally don't need to edit below this line
+   ============================================================= */
+(function () {
+  const $ = (s, el = document) => el.querySelector(s);
+  const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const waLink = msg => `https://wa.me/${CONFIG.whatsapp}?text=${encodeURIComponent(msg || CONFIG.whatsappMessage)}`;
+
+  /* ---------- Contact links ---------- */
+  $$("[data-wa]").forEach(a => { a.href = waLink(); a.target = "_blank"; a.rel = "noopener"; });
+  $$("[data-wa-display]").forEach(el => el.textContent = CONFIG.whatsappDisplay);
+  $$("[data-email]").forEach(el => el.textContent = CONFIG.email);
+  $$("[data-email-link]").forEach(a => a.href = "mailto:" + CONFIG.email);
+  $("#year").textContent = new Date().getFullYear();
+  Object.entries(CONFIG.social).forEach(([name, url]) => {
+    if (!url) return;
+    const li = document.createElement("li");
+    li.innerHTML = `<a href="${esc(url)}" target="_blank" rel="noopener">${esc(name)}</a>`;
+    $("#contactList").appendChild(li);
+  });
+
+  /* ---------- Navbar border + mobile bar (IntersectionObserver, no scroll listeners) ---------- */
+  const nav = $("#nav"), bar = $("#mobileBar");
+  new IntersectionObserver(([e]) => nav.classList.toggle("scrolled", !e.isIntersecting)).observe($("#topSentinel"));
+  let heroVisible = true, contactVisible = false;
+  const syncBar = () => bar.classList.toggle("show", !heroVisible && !contactVisible);
+  new IntersectionObserver(([e]) => { heroVisible = e.isIntersecting; syncBar(); }, { threshold: 0.15 }).observe($("#top"));
+  new IntersectionObserver(([e]) => { contactVisible = e.isIntersecting; syncBar(); }, { threshold: 0.2 }).observe($("#contact"));
+
+  const menuBtn = $("#menuBtn"), links = $("#navLinks");
+  menuBtn.addEventListener("click", () => {
+    const open = links.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded", open);
+  });
+  $$("a", links).forEach(a => a.addEventListener("click", () => { links.classList.remove("open"); menuBtn.setAttribute("aria-expanded", "false"); }));
+
+  /* ---------- Scroll reveal ---------- */
+  const revealIO = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add("in"); revealIO.unobserve(e.target); }
+  }), { threshold: 0.12, rootMargin: "0px 0px -6% 0px" });
+  $$(".reveal").forEach(el => revealIO.observe(el));
+
+  /* ---------- Magnetic buttons (transform only, rAF, desktop pointers) ---------- */
+  if (!reduce && matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    $$("[data-magnetic]").forEach(el => {
+      let tx = 0, ty = 0, x = 0, y = 0, raf = null;
+      const tick = () => {
+        x += (tx - x) * 0.18; y += (ty - y) * 0.18;
+        el.style.setProperty("--mx", x.toFixed(2) + "px");
+        el.style.setProperty("--my", y.toFixed(2) + "px");
+        raf = (Math.abs(tx - x) > 0.05 || Math.abs(ty - y) > 0.05) ? requestAnimationFrame(tick) : null;
+      };
+      const kick = () => { if (!raf) raf = requestAnimationFrame(tick); };
+      el.addEventListener("pointermove", e => {
+        const r = el.getBoundingClientRect();
+        tx = (e.clientX - (r.left + r.width / 2)) * 0.22;
+        ty = (e.clientY - (r.top + r.height / 2)) * 0.32;
+        kick();
+      });
+      el.addEventListener("pointerleave", () => { tx = 0; ty = 0; kick(); });
+    });
+  }
+
+  /* ---------- Hero console: bilingual typewriter + pipeline ---------- */
+  const heroIO = { on: true };
+  new IntersectionObserver(([e]) => heroIO.on = e.isIntersecting).observe($(".hero-visual"));
+  const canRun = () => heroIO.on && !document.hidden;
+  const lines = [
+    { en: "Before you climb, check your harness, buckle, and lanyard.", id: "Sebelum naik, periksa harness, gesper, dan lanyard Anda." },
+    { en: "Keep three points of contact on the ladder at all times.", id: "Selalu jaga tiga titik tumpu saat menaiki tangga." },
+    { en: "Report damaged equipment to your supervisor immediately.", id: "Segera laporkan peralatan yang rusak kepada supervisor." }
+  ];
+  const subText = $("#subText"), subLang = $("#subLang");
+  if (!reduce) {
+    (async function typeLoop() {
+      for (let i = 0; ; i = (i + 1) % lines.length) {
+        for (const lang of ["en", "id"]) {
+          while (!canRun()) await sleep(400);
+          subLang.textContent = lang.toUpperCase();
+          const txt = lines[i][lang];
+          for (let c = 0; c <= txt.length; c++) { subText.textContent = txt.slice(0, c); await sleep(26 + Math.random() * 30); }
+          await sleep(1900);
+        }
+      }
+    })();
+  }
+  const steps = $$("#pipeline li"), qc = $("#qcBadge");
+  let s = 0;
+  const renderPipe = () => {
+    steps.forEach((li, i) => { li.classList.toggle("done", i < s); li.classList.toggle("active", i === s); });
+    qc.classList.toggle("show", s >= steps.length);
+  };
+  if (reduce) { s = steps.length; renderPipe(); }
+  else setInterval(() => { if (!canRun()) return; s = (s + 1) % (steps.length + 2); renderPipe(); }, 1900);
+
+  /* ---------- Process: light steps + fill rail as they enter view ---------- */
+  const stepEls = $$("#steps .step"), stepsBox = $("#steps");
+  const stepIO = new IntersectionObserver(entries => entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    e.target.classList.add("lit");
+    const lit = stepEls.filter(x => x.classList.contains("lit")).length;
+    stepsBox.style.setProperty("--p", (lit - 1) / (stepEls.length - 1));
+    stepIO.unobserve(e.target);
+  }), { rootMargin: "0px 0px -40% 0px" });
+  stepEls.forEach(el => stepIO.observe(el));
+
+  /* ---------- Portfolio: render, filter, skeleton + empty states ---------- */
+  const works = $("#works"), filters = $("#filters");
+  const SPANS = [7, 5, 5, 7, 6, 6];   // asymmetric widths on a 12-column grid
+  CONFIG.portfolio.forEach((item, i) => {
+    const el = document.createElement("article");
+    el.className = "work"; el.dataset.cat = item.category; el.style.setProperty("--i", i);
+    const media = item.video
+      ? `<button class="work-media video" data-yt="${esc(item.video)}" aria-label="Play ${esc(item.title)}" style="background-image:url(https://i.ytimg.com/vi/${esc(item.video)}/hqdefault.jpg)"><span class="play-btn"><svg class="ic"><use href="#play"/></svg></span></button>`
+      : `<div class="work-media" style="--i:${i}"><span class="ph-label"><i></i>Sample in production</span><div class="skel"><i></i><i></i><i></i></div></div>`;
+    el.innerHTML = `${media}<div class="work-body"><h3>${esc(item.title)}</h3><small>${esc(item.category)}</small></div>`;
+    works.appendChild(el);
+  });
+  const empty = document.createElement("div");
+  empty.className = "empty"; empty.hidden = true;
+  empty.innerHTML = `<svg class="ic"><use href="#film"/></svg><h3>No samples in this category yet</h3><p>We can share a private sample that matches your industry. Just ask.</p><a class="btn btn-ghost btn-sm" href="${waLink("Hi Vokara, could you share a video sample for my industry?")}" target="_blank" rel="noopener">Request a sample</a>`;
+  works.appendChild(empty);
+
+  const layout = () => $$(".work", works).filter(w => !w.hidden).forEach((w, i) => w.style.setProperty("--span", SPANS[i % SPANS.length]));
+  layout();
+
+  CONFIG.portfolioCategories.forEach((cat, i) => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "filter"; b.textContent = cat;
+    b.setAttribute("aria-pressed", i === 0 ? "true" : "false");
+    b.addEventListener("click", async () => {
+      $$(".filter", filters).forEach(x => x.setAttribute("aria-pressed", "false"));
+      b.setAttribute("aria-pressed", "true");
+      const all = $$(".work", works);
+      all.forEach(w => w.classList.add("out"));
+      await sleep(reduce ? 0 : 280);
+      let shown = 0;
+      all.forEach(w => { const on = cat === "All" || w.dataset.cat === cat; w.hidden = !on; if (on) shown++; });
+      empty.hidden = shown > 0;
+      layout();
+      all.filter(w => !w.hidden).forEach((w, i) => setTimeout(() => w.classList.remove("out"), reduce ? 0 : i * 70));
+    });
+    filters.appendChild(b);
+  });
+  works.addEventListener("click", e => {
+    const btn = e.target.closest("[data-yt]");
+    if (btn) btn.innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${btn.dataset.yt}?autoplay=1&rel=0" title="Project video" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
+  });
+
+  /* ---------- Testimonials (optional) ---------- */
+  if (CONFIG.showTestimonials) {
+    $("#testimonials").hidden = false;
+    $("#quotes").innerHTML = CONFIG.testimonials.map(t =>
+      `<blockquote class="quote"><p>“${esc(t.quote)}”</p><footer><b>${esc(t.name)}</b><span>${esc(t.role)}</span></footer></blockquote>`).join("");
+  }
+
+  /* ---------- FAQ accordion ---------- */
+  $$(".faq-q").forEach(q => q.addEventListener("click", () => {
+    const open = q.getAttribute("aria-expanded") === "true";
+    $$(".faq-q").forEach(x => x.setAttribute("aria-expanded", "false"));
+    q.setAttribute("aria-expanded", String(!open));
+  }));
+
+  /* ---------- Forms ---------- */
+  const isEmail = v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim());
+  const rules = {
+    name: v => v.trim() ? "" : "Please enter your name.",
+    email: v => isEmail(v) ? "" : "Please enter a valid email address.",
+    service: v => v ? "" : "Please choose a service.",
+    message: v => v.trim().length >= 10 ? "" : "Please describe your project (at least 10 characters)."
+  };
+  function check(form, name) {
+    const el = form.elements[name], msg = rules[name](el.value);
+    $("#err-" + name).textContent = msg;
+    el.setAttribute("aria-invalid", msg ? "true" : "false");
+    return !msg;
+  }
+  async function send(payload) {
+    const res = await fetch("/api/inquiry", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) });
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || !data.ok) throw new Error(data.error || "Something went wrong. Please contact us on WhatsApp.");
+  }
+  function setLoading(btn, on, label) {
+    btn.classList.toggle("is-loading", on);
+    btn.setAttribute("aria-busy", on);
+    const l = $(".btn-label", btn) || btn;
+    if (label) l.textContent = label;
+  }
+
+  // Quote form
+  const qf = $("#quoteForm"), alertBox = $("#formAlert"), submitBtn = $("#submitBtn");
+  let tried = false;
+  Object.keys(rules).forEach(n => qf.elements[n].addEventListener("input", () => tried && check(qf, n)));
+  qf.addEventListener("submit", async e => {
+    e.preventDefault();
+    tried = true; alertBox.textContent = "";
+    const results = Object.keys(rules).map(n => check(qf, n));
+    if (results.includes(false)) { qf.querySelector('[aria-invalid="true"]').focus(); return; }
+    const d = Object.fromEntries(new FormData(qf));
+    $("#waContinue").href = waLink(`Hi Vokara, I just requested a quote on your website.\n\nName: ${d.name}${d.company ? "\nCompany: " + d.company : ""}\nService: ${d.service}\nProject: ${d.message}`);
+    setLoading(submitBtn, true, "Sending request");
+    try {
+      await send({ type: "quote", ...d });
+      $("#formCard").classList.add("done");
+      $("#successTitle").focus();
+    } catch (err) {
+      alertBox.textContent = err.message;
+    } finally {
+      setLoading(submitBtn, false, "Request a free quote");
+    }
+  });
+
+  // Stock footage waitlist
+  const wf = $("#waitlistForm"), wlErr = $("#err-wl"), wlInput = $("#wl-email");
+  wf.addEventListener("submit", async e => {
+    e.preventDefault();
+    const btn = $("button", wf);
+    if (!isEmail(wlInput.value)) { wlErr.textContent = "Please enter a valid email address."; wlInput.setAttribute("aria-invalid", "true"); wlInput.focus(); return; }
+    wlErr.textContent = ""; wlInput.setAttribute("aria-invalid", "false");
+    setLoading(btn, true);
+    try {
+      await send({ type: "waitlist", ...Object.fromEntries(new FormData(wf)) });
+      $(".field", wf).innerHTML = `<p class="help" style="font-size:.95rem;color:var(--ink)" role="status"><b>You're on the list.</b> We'll email you when the library launches.</p>`;
+    } catch (err) {
+      wlErr.textContent = err.message;
+    } finally { setLoading(btn, false); }
+  });
+})();
+</script>
+</body>
+</html>
