@@ -1,7 +1,7 @@
 /* =============================================================
    VOKARA — server.js
    Simple Express server:
-   1. Serves the website from the /public folder
+   1. Serves the website page from views/index.html
    2. Receives form submissions at POST /api/inquiry
       and emails them to you via Gmail SMTP (nodemailer)
 
@@ -24,13 +24,9 @@ const PORT = process.env.PORT || 3000; // Hostinger provides PORT automatically
 app.disable("x-powered-by");
 app.use(express.json({ limit: "20kb" }));
 
-// ---------- Static website ----------
-app.use(
-  express.static(path.join(__dirname, "public"), {
-    maxAge: "1h",
-    extensions: ["html"],
-  })
-);
+// ---------- Static files (optional) ----------
+// Put images/logos in a /public folder if you add them later.
+app.use(express.static(path.join(__dirname, "public"), { maxAge: "1h" }));
 
 // ---------- Email transporter ----------
 const mailReady = Boolean(process.env.SMTP_USER && process.env.SMTP_PASS);
@@ -134,16 +130,17 @@ app.post("/api/inquiry", async (req, res) => {
 });
 
 // ---------- Landing page for every other GET request ----------
-// The page is read once into memory, so it works both on Hostinger
-// and on Vercel (where express.static is ignored). Never redirects.
+// The page lives in views/index.html and is read once into memory.
+// (Vercel does not bundle the public/ folder into the server, so the
+// page must NOT be in public/.) Works on Hostinger and Vercel.
 let indexHtml = null;
 try {
-  indexHtml = fs.readFileSync(path.join(__dirname, "public", "index.html"), "utf8");
+  indexHtml = fs.readFileSync(path.join(__dirname, "views", "index.html"), "utf8");
 } catch (err) {
-  console.error("[vokara] Could not read public/index.html:", err.message);
+  console.error("[vokara] Could not read views/index.html:", err.message);
 }
 app.get("*", (req, res) => {
-  if (!indexHtml) return res.status(500).type("text").send("Website file not found (public/index.html).");
+  if (!indexHtml) return res.status(500).type("text").send("Website file not found (views/index.html).");
   res.type("html").send(indexHtml);
 });
 
